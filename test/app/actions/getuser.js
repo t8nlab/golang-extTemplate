@@ -1,11 +1,10 @@
-import { log } from "@titanpl/native";
-import { addNumber } from "@ext/template";
+    import { log, defineAction } from "@titanpl/native";
+import Extension from '@ext/go-extension';
 
-export function getuser(req) {
-    log("Handling user request...");
-    log(addNumber(9, 8));
-    return {
-        message: "Hello from JavaScript action!",
-        user_id: req.params.id
-    };
-}
+
+export default defineAction((req) => {
+const ext = new Extension();
+const result = ext.addNumber(10, 20);
+log(result); // 30
+return result
+})
