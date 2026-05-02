@@ -1,0 +1,10 @@
+{
+    "//": "Change the name below to match your extension name",
+    "name": "@ext/go-extension",
+    "type": "native",
+    "entry": "index.js",
+    "native": {
+        "windows": "go-extension.dll",
+        "linux": "go-extension.so"
+    }
+}

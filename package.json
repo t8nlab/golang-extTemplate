@@ -1,0 +1,41 @@
+{
+    "//": "Change the name below to your actual extension name",
+    "name": "@ext/go-extension",
+    "version": "1.0.0",
+    "description": "TitanPL Golang Extension",
+    "main": "index.js",
+    "type": "module",
+    "types": "index.d.ts",
+    "scripts": {
+        "build": "go build -buildmode=c-shared -o go-extension.dll",
+        "build:linux": "go build -buildmode=c-shared -o go-extension.so"
+    },
+    "keywords": [
+        "titan",
+        "titanpl",
+        "titan-planet",
+        "extension"
+    ],
+    "author": "",
+    "license": "",
+    "files": [
+        "index.js",
+        "ext.js",
+        "titan.json",
+        "utils",
+        "index.d.ts",
+        "*.h",
+        "*.dll",
+        "*.exe",
+        "*.so",
+        "*.dylib",
+        "README.md"
+    ],
+    "devDependencies": {
+        "esbuild": "^0.27.2"
+    },
+    "dependencies": {
+        "@titanpl/core": "4.0.0",
+        "@titanpl/native": "^7.0.1"
+    }
+}
